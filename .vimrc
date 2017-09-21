@@ -44,6 +44,3 @@ nnoremap <C-l> <C-w>l
 syntax enable
 colorscheme monokai
 
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
