@@ -45,10 +45,6 @@ nnoremap <C-l> <C-w>l
 syntax enable
 colorscheme monokai
 
-execute pathogen#infect()
-syntax on
-
-
 augroup json_autocmd
   autocmd!
   autocmd FileType json set autoindent
@@ -59,3 +55,5 @@ augroup json_autocmd
   autocmd FileType json set foldmethod=syntax
   autocmd BufWritePre *.json :normal gg=G
 augroup END
+=======
+>>>>>>> b0215a73b48b60eb8c1a4b34b3a5a558730370a2
