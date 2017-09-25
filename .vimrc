@@ -10,6 +10,7 @@ Plugin 'stanangeloff/php.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all'  }
+Plugin 'elzr/vim-json'
 
 call vundle#end()
 filetype plugin indent on
@@ -46,4 +47,15 @@ colorscheme monokai
 
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
+
+
+augroup json_autocmd
+  autocmd!
+  autocmd FileType json set autoindent
+  autocmd FileType json set formatoptions=tcq2l
+  autocmd FileType json set textwidth=78 shiftwidth=2
+  autocmd FileType json set softtabstop=2 tabstop=8
+  autocmd FileType json set expandtab
+  autocmd FileType json set foldmethod=syntax
+  autocmd BufWritePre *.json :normal gg=G
+augroup END
