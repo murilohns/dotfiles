@@ -28,10 +28,9 @@ set relativenumber
 set hlsearch " Highlight all matches. To turn it off, use :noh
 set incsearch " When searching, shows patterns typed so far
 
-" Tab settings
-set shiftround
-set shiftwidth=2
-set tabstop=2
+"set shiftround
+"set shiftwidth=2
+"set tabstop=2
 " Always use spaces when inserting a <Tab>, so formatting 
 " won't be messed up if tabstop is changed
 set expandtab 
@@ -45,6 +44,16 @@ nnoremap <C-l> <C-w>l
 syntax enable
 colorscheme monokai
 
+execute pathogen#infect()
+syntax on
+
+au FileType python setlocal ts=4 sts=4 sw=4
+au FileType php setlocal ts=4 sts=4 sw=4
+au FileType ruby setlocal ts=2 sts=2 sw=2
+au FileType javascript setlocal ts=2 sts=2 sw=2
+au FileType html setlocal ts=4 sts=4 sw=4
+
+
 augroup json_autocmd
   autocmd!
   autocmd FileType json set autoindent
@@ -55,5 +64,3 @@ augroup json_autocmd
   autocmd FileType json set foldmethod=syntax
   autocmd BufWritePre *.json :normal gg=G
 augroup END
-=======
->>>>>>> b0215a73b48b60eb8c1a4b34b3a5a558730370a2
