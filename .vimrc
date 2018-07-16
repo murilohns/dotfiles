@@ -1,8 +1,10 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+
 " Vim Plugins
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-ruby/vim-ruby'
@@ -10,9 +12,8 @@ Plugin 'stanangeloff/php.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all'  }
-Plugin 'elzr/vim-json'
-
 call vundle#end()
+
 filetype plugin indent on
 
 set backspace=indent,eol,start
@@ -42,9 +43,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 syntax enable
-colorscheme monokai
 
-execute pathogen#infect()
 syntax on
 
 au FileType python setlocal ts=4 sts=4 sw=4
@@ -52,7 +51,6 @@ au FileType php setlocal ts=4 sts=4 sw=4
 au FileType ruby setlocal ts=2 sts=2 sw=2
 au FileType javascript setlocal ts=2 sts=2 sw=2
 au FileType html setlocal ts=4 sts=4 sw=4
-
 
 augroup json_autocmd
   autocmd!
