@@ -78,3 +78,5 @@ vnoremap <leader>q :q!<CR>
 nnoremap <C-t>     :tabnew<CR>
 inoremap <C-t>     <Esc>:tabnew<CR>
 
+" Ident files with F7
+map <F7> mzgg=G`z
