@@ -43,7 +43,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 syntax enable
-
 syntax on
 
 au FileType python setlocal ts=4 sts=4 sw=4
@@ -64,3 +63,14 @@ augroup json_autocmd
 augroup END
 
 set noswapfile " Prevent vim from generate .swp files
+
+let mapleader="\<space>"
+
+" save with Space + w
+nnoremap <leader>w :w!<CR>
+vnoremap <leader>w :w<!CR>
+
+" close with Space + q
+nnoremap <leader>q :q!<CR>
+vnoremap <leader>q :q!<CR>
+
