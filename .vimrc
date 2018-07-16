@@ -74,3 +74,7 @@ vnoremap <leader>w :w<!CR>
 nnoremap <leader>q :q!<CR>
 vnoremap <leader>q :q!<CR>
 
+" Open new tab with Ctrl + t.
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-t>     <Esc>:tabnew<CR>
+
