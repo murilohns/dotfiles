@@ -62,3 +62,5 @@ augroup json_autocmd
   autocmd FileType json set foldmethod=syntax
   autocmd BufWritePre *.json :normal gg=G
 augroup END
+
+set noswapfile " Prevent vim from generate .swp files
