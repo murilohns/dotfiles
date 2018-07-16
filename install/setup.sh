@@ -1,19 +1,21 @@
 #!/bin/bash
 
-        # Run script to install ubuntu packages
-        source ~/.dotfiles/install/ubuntu.sh
+sudo apt-get update
 
-        # Download plug.vim and put it in the `autoload` directory
-        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-        # Install CPython and anaconda
-        source ~/.dotfiles/install/python.sh
+# Setup Vim
+sudo apt-get -qq install vim # Install vim
+cp ../.vimrc ~/ # Move vimrc to home
+sudo apt-get -qq install silversearcher-ag # Install ag for better FZF usage
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-        # Install Ruby lastest stable version with Rails using RVM
-        source ~/.dotfiles/install/ruby.sh
+# Setup Zsh
+sudo apt-get -qq install zsh #Install zsh
+chsh -s $(which zsh) # Set zsh as default shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # Install oh-my-zsh on zsh
 
-        # Generate symlinks
-        env RCRC=$HOME/.dotfiles/rcrc rcup
-        rcup -v
+# Setup Tmux
+sudo apt-get -qq install tmux
 
-        # Set zsh as default shell
-        chsh -s $(which zsh)
+# Run script to install ubuntu packages
+source ~/.dotfiles/install/ubuntu.sh
+
