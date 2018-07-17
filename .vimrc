@@ -67,16 +67,20 @@ set noswapfile " Prevent vim from generate .swp files
 let mapleader="\<space>"
 
 " save with Space + w
-nnoremap <leader>w <Esc>:w!<CR>
+nnoremap <leader>w :w!<CR>
 vnoremap <leader>w <Esc>:w!<CR>
 
 " close with Space + q
-nnoremap <leader>q <Esc>:q!<CR>
+nnoremap <leader>q :q!<CR>
 vnoremap <leader>q <Esc>:q!<CR>
 
 " Open new tab with Ctrl + t.
 nnoremap <C-t> :tabnew<CR>
 inoremap <C-t> <Esc>:tabnew<CR>
+
+" Close tab with Ctrl + w
+nnoremap <C-w> :tabclose<CR>
+inoremap <C-w> <Esc>:tabclose<CR>
 
 " Ident files with F7
 map <F7> mzgg=G`z
