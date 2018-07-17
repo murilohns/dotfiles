@@ -12,6 +12,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo apt-get -qq install zsh # Install zsh
 chsh -s $(which zsh) # Set zsh as default shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" # Install oh-my-zsh on zsh
+cp ../.zsh ~/ # Move zshrc to home
 
 # Setup Tmux
 sudo apt-get -qq install tmux # Install tmux
@@ -34,6 +35,15 @@ groupadd docker
 usermod -aG docker $USER
 chmod 777 /var/run/docker.sock
 
+# Install Node
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+apt-get install -y nodejs
+
+# Setup nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+# Setup npm
+apt-get install npm
 # Run script to install ubuntu packages
 source ~/.dotfiles/install/ubuntu.sh
 
