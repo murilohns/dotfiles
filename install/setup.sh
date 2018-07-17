@@ -17,8 +17,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sudo apt-get -qq install tmux # Install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm # Install Tmux Plugin Manager
 cp ../.tmux.conf ~/ # Move tmux.conf to home
-# You must set tmux source to ~/.tmux.conf running the following command: tmux source ~/.tmux.conf
-# Then you must go to ~/ and run: tmux, then press (Ctrl + b) + I
+echo "You must set tmux source to ~/.tmux.conf running the following command: tmux source ~/.tmux.conf"
+echo " Then you must go to ~/ and run: tmux, then press (Ctrl + b) + I to install the extensions"
 
 # Run script to install ubuntu packages
 source ~/.dotfiles/install/ubuntu.sh
