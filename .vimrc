@@ -80,3 +80,6 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 
 " Ident files with F7
 map <F7> mzgg=G`z
+
+" FZF ignore files in gitignore
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
