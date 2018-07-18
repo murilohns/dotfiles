@@ -15,6 +15,7 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all'  }
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'lepture/vim-jinja'
 call vundle#end()
 
 filetype plugin indent on
