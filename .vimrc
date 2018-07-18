@@ -90,6 +90,8 @@ map <F7> mzgg=G`z
 
 " FZF ignore files in gitignore
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+" Open FZF in new tab
+noremap <silent> <C-t> :call fzf#run({'sink':'tabe','down':'30%'})<CR>
 
 let g:airline_theme='tomorrow'
 
