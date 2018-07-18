@@ -6,12 +6,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Vim Plugins
-Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'stanangeloff/php.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all'  }
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
 call vundle#end()
 
 filetype plugin indent on
@@ -87,3 +90,7 @@ map <F7> mzgg=G`z
 
 " FZF ignore files in gitignore
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+
+let g:airline_theme='tomorrow'
+
+colorscheme molokai
