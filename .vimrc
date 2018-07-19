@@ -19,6 +19,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'lepture/vim-jinja'
 Plugin 'mattn/emmet-vim'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
 call vundle#end()
 
