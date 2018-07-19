@@ -18,6 +18,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'lepture/vim-jinja'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -55,7 +56,7 @@ au FileType python setlocal ts=4 sts=4 sw=4
 au FileType php setlocal ts=4 sts=4 sw=4
 au FileType ruby setlocal ts=2 sts=2 sw=2
 au FileType javascript setlocal ts=2 sts=2 sw=2
-au FileType html setlocal ts=4 sts=4 sw=4
+au FileType html setlocal ts=2 sts=2 sw=2
 
 augroup json_autocmd
   autocmd!
@@ -99,3 +100,5 @@ noremap <silent> <C-t> :call fzf#run({'sink':'tabe','down':'30%'})<CR>
 let g:airline_theme='tomorrow'
 
 colorscheme molokai
+
+imap <C-Space> <C-y>,
