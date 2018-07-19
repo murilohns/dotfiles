@@ -19,6 +19,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'lepture/vim-jinja'
 Plugin 'mattn/emmet-vim'
+Plugin 'neomake/neomake'
 call vundle#end()
 
 filetype plugin indent on
@@ -102,3 +103,12 @@ let g:airline_theme='tomorrow'
 colorscheme molokai
 
 imap <C-Space> <C-y>,
+
+" use lint while typing
+call neomake#configure#automake('w')
+
+autocmd InsertLeave,BufWritePost * update | Neomake
+
+" Eslint
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+let g:neomake_javascript_enabled_makers = ['eslint']
