@@ -1,0 +1,16 @@
+ {
+   "libs": [
+     "browser",
+     "jquery",
+     "react",
+     "ecmascript"
+   ],
+   "plugins": {
+       "doc_comment": {
+           "fullDocs": true
+       },
+       "node": {},
+       "node-express": {},
+       "webpack": {}
+   }
+ }

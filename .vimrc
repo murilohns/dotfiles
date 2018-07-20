@@ -21,6 +21,7 @@ Plugin 'lepture/vim-jinja'
 Plugin 'mattn/emmet-vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 filetype plugin indent on
