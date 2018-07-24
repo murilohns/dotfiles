@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Vim Plugins
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'stanangeloff/php.vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -21,7 +22,9 @@ Plugin 'lepture/vim-jinja'
 Plugin 'mattn/emmet-vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'heavenshell/vim-prettier'
 call vundle#end()
 
 filetype plugin indent on
@@ -60,17 +63,7 @@ au FileType php setlocal ts=4 sts=4 sw=4
 au FileType ruby setlocal ts=2 sts=2 sw=2
 au FileType javascript setlocal ts=2 sts=2 sw=2
 au FileType html setlocal ts=2 sts=2 sw=2
-
-augroup json_autocmd
-  autocmd!
-  autocmd FileType json set autoindent
-  autocmd FileType json set formatoptions=tcq2l
-  autocmd FileType json set textwidth=78 shiftwidth=2
-  autocmd FileType json set softtabstop=2 tabstop=8
-  autocmd FileType json set expandtab
-  autocmd FileType json set foldmethod=syntax
-  autocmd BufWritePre *.json :normal gg=G
-augroup END
+au FileType css setlocal ts=2 sts=2 sw=2
 
 set noswapfile " Prevent vim from generate .swp files
 
@@ -114,3 +107,9 @@ autocmd InsertLeave,BufWritePost * update | Neomake
 " Eslint
 let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
 let g:neomake_javascript_enabled_makers = ['eslint']
+
+let g:indent_guides_enable_on_vim_startup = 1
+
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+autocmd BufWritePost *.js,*.jsx call prettier#run(1)
