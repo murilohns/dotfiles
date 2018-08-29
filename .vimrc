@@ -23,7 +23,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
 Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'heavenshell/vim-prettier'
 call vundle#end()
 
