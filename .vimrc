@@ -64,6 +64,7 @@ au FileType ruby setlocal ts=2 sts=2 sw=2
 au FileType javascript setlocal ts=2 sts=2 sw=2
 au FileType html setlocal ts=2 sts=2 sw=2
 au FileType css setlocal ts=2 sts=2 sw=2
+au FileType json setlocal ts=2 sts=2 sw=2
 
 set noswapfile " Prevent vim from generate .swp files
 
