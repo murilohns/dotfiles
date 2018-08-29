@@ -24,6 +24,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'neomake/neomake'
 Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plugin 'heavenshell/vim-prettier'
+Plugin 'joonty/vim-phpqa'
 call vundle#end()
 
 filetype plugin indent on
@@ -110,5 +111,11 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:indent_guides_enable_on_vim_startup = 1
 
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" Config phpcs
+let g:phpqa_codesniffer_cmd='vendor/bin/phpcs'
+let g:phpqa_codesniffer_args = '--standard=PSR2'
+" Ignore phpmd
+let g:phpqa_messdetector_autorun = 0
 
 autocmd BufWritePost *.js,*.jsx call prettier#run(1)
