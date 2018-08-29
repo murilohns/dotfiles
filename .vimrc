@@ -96,7 +96,7 @@ noremap <silent> <C-t> :call fzf#run({'sink':'tabe','down':'30%'})<CR>
 
 let g:airline_theme='tomorrow'
 
-colorscheme molokai
+colorscheme obsidian
 
 imap <C-Space> <C-y>,
 
